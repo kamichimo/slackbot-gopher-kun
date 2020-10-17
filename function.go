@@ -16,7 +16,7 @@ var api = slack.New(os.Getenv("SLACK_API_SECRET_KEY"))
 var slackBotUserID = os.Getenv("SLACK_BOT_USER_ID")
 var zoomURL = os.Getenv("ZOOM_URL")
 
-func slackbotGopherKun(w http.ResponseWriter, r *http.Request) {
+func PostMessage(w http.ResponseWriter, r *http.Request) {
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		log.Println(err)
